@@ -1,0 +1,12 @@
+# Taskfile.yml
+version: "3"
+silent: true
+
+includes:
+  precommit: ./.taskfiles/precommit.taskfile.yml
+
+tasks:
+  default:
+    desc: Show help
+    cmds:
+      - task --list

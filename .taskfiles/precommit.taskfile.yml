@@ -1,0 +1,26 @@
+# .taskfiles/precommit.taskfile.yml
+# .taskfiles/precommit.taskfile.yml \n
+version: "3"
+
+tasks:
+  install:
+    desc: Install pre-commit hooks
+    cmds:
+      - pre-commit install
+
+  run:
+    desc: Run pre-commit on all files
+    cmds:
+      - cmd: pre-commit run --all-files
+        ignore_error: true
+
+  run-staged:
+    desc: Run pre-commit on staged files only
+    cmds:
+      - cmd: pre-commit run
+        ignore_error: true
+
+  update:
+    desc: Update pre-commit hooks to their latest versions
+    cmds:
+      - pre-commit autoupdate
